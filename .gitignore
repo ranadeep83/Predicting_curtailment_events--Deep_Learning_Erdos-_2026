@@ -1,0 +1,26 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Local editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# large generated/downloaded data files
+EDA/Open_Meteo_combined_2019-05-01_to_2026-05-01.csv
+raw_data/Open_Meteo_combined_2019-05-01_to_2026-05-01.csv
+raw_data/Open_Meteo_combined_2019-05-01_to_2026-05-01.tmp.csv
+raw_data/Open_Meteo_sampling_point_metadata.csv
+raw_data/open_meteo_cache/
+raw_data/Open_Meteo_previous_runs_day1_2024-03-01_to_2026-05-02.csv
+raw_data/Open_Meteo_previous_runs_day1_2024-03-01_to_2026-05-02.tmp.csv
+raw_data/previous_runs_day1_cache/
+processed_data/Open_Meteo_regional_features_2019-05-01_to_2026-05-01.csv
+processed_data/Open_Meteo_previous_runs_day1_regional_features_2024-03-01_to_2026-05-02.csv
