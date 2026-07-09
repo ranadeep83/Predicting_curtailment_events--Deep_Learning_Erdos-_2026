@@ -14,3 +14,4 @@ nbformat==5.10.4
 --extra-index-url https://download.pytorch.org/whl/cu128
 torch==2.11.0+cu128
 pytest==9.1.1
+pytorch_forecasting==1.8.0
