@@ -30,7 +30,7 @@ The main stakeholders are German renewable energy producers, electricity market 
 
 - Weather data: Open meteo, https://open-meteo.com/en/docs/historical-weather-api and forecast weather data, https://previous-runs-api.open-meteo.com/v1/forecast. Open meteor provides hourly weather data such as wind speed, solar radiation, cloud cover which are direct factors for wind and solar electricity production in various locations in Germany.
 
-2. Our target is negative price event at time `t_0`, with `y = 1` meaning curtailment happens at hour `t_0`. Our features include price, electricity generation in different categories, actual consumption, wind speed and solar radiation measurements for `t < t_0 - 23`. We also include same category of weather data forecasted 24 hour ahead from `t_0 - 23` to `t_0`.
+2. Our target is negative price event at time `t_0`, with `y = 1` meaning curtailment happens at hour `t_0`. Our features include price, electricity generation in different categories, actual consumption, wind speed and solar radiation measurements for `t < t_0 - 23`. We also include the same category of weather data forecasted 24 hour ahead from `t_0 - 23` to `t_0` (for TCN and LSTM) and just the forecasted data at 't_0' for TFT.
 
 ## Modeling approach
 
@@ -38,11 +38,12 @@ Dataset is split in to roughly 60%/20%/20% fashion as train/validation/test sets
 
 ## Results
 1. Hyperparameter-tuned TFT models produced the best PR-AUC and F1 score on the validation set.
-2. On the test-set, we obtained a PR-AUC score of and an F1 score  . The corresponding confusion matrix is shown below.
+2. On the test-set, we obtained a PR-AUC score of 0.70 and an F1 score of 0.69 . The corresponding confusion matrix is shown below.
 
+<img src="Results/confusion_matrix_tft.png" alt="confusion matrix tft" width="400" height="400"/>
 
-
-<img src="Results/error_rate_hour.png" alt="error rate by hour" width="500" height="500"/> <img src="Results/error_rate_day.png" alt="error rate by hour" width="500" height="500"/>
+Inspecting the errors on the validation set (hyperparameter-tuned TFT model), we note that most errors occured during the afternoons and on Fridays and Saturdays.
+<img src="Results/error_rate_hour.png" alt="error rate by hour" width="400" height="400"/> <img src="Results/error_rate_day.png" alt="error rate by day" width="400" height="400"/>
 
 
 
