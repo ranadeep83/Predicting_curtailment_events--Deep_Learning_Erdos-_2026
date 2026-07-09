@@ -5,7 +5,7 @@ Project completed for Erdos insititute deep learning bootcamp (summer-2026)
 ### Team members
 
 1.  [Ranadeep Roy](https://github.com/ranadeep83)
-2.  Yuanfan Wang
+2.  [Yuanfan Wang](https://github.com/yuw136)
 
 ## Project overview
 
