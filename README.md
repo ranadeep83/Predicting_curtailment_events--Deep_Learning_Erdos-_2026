@@ -37,8 +37,13 @@ The main stakeholders are German renewable energy producers, electricity market 
 Dataset is split in to roughly 60%/20%/20% fashion as train/validation/test sets. We evaluate model performance by calclulating pr-auc score and best f1 score among thresholds on predictions in validation set. Models considered include XGBoost with lag features, and time series models such as lstm, tcn, and tft.
 
 ## Results
+1. Hyperparameter-tuned TFT models produced the best PR-AUC and F1 score on the validation set.
+2. On the test-set, we obtained a PR-AUC score of and an F1 score  . The corresponding confusion matrix is shown below.
 
-<img src="Results/error_rate_hour.png" alt="error rate by hour" width="500" height="500"/>
+
+
+<img src="Results/error_rate_hour.png" alt="error rate by hour" width="500" height="500"/> <img src="Results/error_rate_day.png" alt="error rate by hour" width="500" height="500"/>
+
 
 
 ## Conclusion and future directions
