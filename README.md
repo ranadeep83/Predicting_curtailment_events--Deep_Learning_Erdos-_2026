@@ -43,6 +43,7 @@ Dataset is split in to roughly 60%/20%/20% fashion as train/validation/test sets
 <img src="Results/confusion_matrix_tft.png" alt="confusion matrix tft" width="400" height="400"/>
 
 Inspecting the errors on the validation set (hyperparameter-tuned TFT model), we note that most errors occured during the afternoons and on Fridays and Saturdays.
+
 <img src="Results/error_rate_hour.png" alt="error rate by hour" width="400" height="400"/> <img src="Results/error_rate_day.png" alt="error rate by day" width="400" height="400"/>
 
 
