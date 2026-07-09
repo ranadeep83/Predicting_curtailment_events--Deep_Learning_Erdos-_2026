@@ -38,6 +38,9 @@ Dataset is split in to roughly 60%/20%/20% fashion as train/validation/test sets
 
 ## Results
 
+<img src="Results/error_rate_hour.png" alt="error rate by hour" width="500" height="500"/>
+
+
 ## Conclusion and future directions
 
 ## Folder organization
