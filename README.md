@@ -67,3 +67,11 @@ $$
 With this loss "high value errors" can be reduced by 25%, while F1 and PR-AUC decreases due to introduction of more low value errors. See [error_analysis.ipynb](Experimental_modeling/error_analysis.ipynb) and [Fix_price_severity_experiments.ipynb](Experimental_modeling/Fix_price_severity_experiments.ipynb).
 
 ## Folder organization
+1. raw_data : this folder contains the raw data obtained from SMARD website and a link to obtain the Open-Meteo data used in this project. 
+2. processed_data : this folder contains the finalized feature data used in LSTM, TCN and XGBoost model
+3. EDA : this folder contains notebooks for exploratory data analysis
+4. Experimental_modeling : contains different notebooks for preliminary modeling, which formed the basis for our final approach to the problem
+5. Final_models : contains the final  LSTM, TCN, XGBoost and TFT models for the project
+6. Results : key plots related to the results of our project
+
+More details and descriptions are provided in the README files within the individual folders
