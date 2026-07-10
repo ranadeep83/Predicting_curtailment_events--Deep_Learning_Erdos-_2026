@@ -9,7 +9,7 @@ Project completed for Erdos insititute deep learning bootcamp (summer-2026)
 
 ## Project overview
 
-In this project, we build and evaluates machine learning models that predicts electricity curtailment in Germany.
+In this project, we build and evaluates machine learning models that predict electricity curtailment in Germany.
 
 ## Motivation and problem statement
 
@@ -25,9 +25,9 @@ The main stakeholders are German renewable energy producers, electricity market 
 
 1. Main datasets
 
-- Electricity generation, consumption, day-ahead prices: `SMARD.de`. SMARD provides hourly data for actual electricity generation categorized by various sources. In addition to this, the actual consumption data, residual load and the day-ahead prices data is also provided.
+- Electricity generation, consumption, day-ahead prices: `SMARD.de`. SMARD provides hourly data for actual electricity generation categorized by various sources. In addition to this, the actual consumption data, residual load and the day-ahead prices data are also provided.
 
-- Weather data: Open meteo, https://open-meteo.com/en/docs/historical-weather-api and forecast weather data, https://previous-runs-api.open-meteo.com/v1/forecast. Open meteor provides hourly weather data such as wind speed, solar radiation, cloud cover which are direct factors for wind and solar electricity production in various locations in Germany. One can find raw and processed data from [raw_data](https://drive.google.com/drive/folders/1Hdh1lPg-RQljx7lzWZLcbSLa1OY9ehX4) and [processed_data](https://drive.google.com/drive/folders/1UTxdQRsDAkfqet1Ttm704oguYIleo3JO), or run [download_open+meteo_weather.ipynb](EDA/download_open_meteo_weather.ipynb) to download the data.
+- Weather data: Open meteo, https://open-meteo.com/en/docs/historical-weather-api and forecast weather data, https://previous-runs-api.open-meteo.com/v1/forecast. Open meteo provides hourly weather data such as wind speed, solar radiation, cloud cover which are direct factors for wind and solar electricity production in various locations in Germany. One can find raw and processed data from [raw_data](https://drive.google.com/drive/folders/1Hdh1lPg-RQljx7lzWZLcbSLa1OY9ehX4) and [processed_data](https://drive.google.com/drive/folders/1UTxdQRsDAkfqet1Ttm704oguYIleo3JO), or run [download_open+meteo_weather.ipynb](EDA/download_open_meteo_weather.ipynb) to download the data.
 
 2. Our target is negative price event at time `t_0`, with `y = 1` meaning curtailment happens at hour `t_0`. Our features include price, electricity generation in different categories, actual consumption, wind speed and solar radiation measurements for `t < t_0 - 23`. We also include the same category of weather data forecasted 24 hour ahead from `t_0 - 23` to `t_0` (for TCN and LSTM) and just the forecasted data at `t_0` for TFT.
 
@@ -52,7 +52,7 @@ Dataset is split in to roughly 60%/20%/20% fashion as train/validation/test sets
 
 2. Due to the small size of data, the train, valid, test set we use are heterogeneous: For example, while training set has data for ~1 year and 3 months, validation set only contains fall and part of winter, and test set has only part of winter + Spring. This might explain degradation of perfomance from valid set to test set for some models, especially for models with emphasis on short-term/fixed term memory like TCN.
 
-<img src = "Results/shift_of_best_threshold_from_valid_to_test.png", alt = "shift of best threshold from valid set to test set, TCN">
+<img src = "Results/shift_of_best_threshold_from_valid_to_test.png" alt = "shift of best threshold from valid set to test setTCN" width="500" height="500">
 
 More data will enable more robust models and analysis of curtailment in other regions.
 
