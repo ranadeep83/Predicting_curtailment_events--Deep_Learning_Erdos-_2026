@@ -65,7 +65,6 @@ def train_lstm(data, config=None):
         "threshold": threshold,
         "feature_columns": dataset["feature_columns"],
         "sequence_shape": dataset["train"]["X"].shape[1:],
-        "history": trained["history"],
         "validation": predictions["validation"],
         "test": predictions["test"],
         "metrics": metrics,

@@ -1,0 +1,1 @@
+For the Open meteo data we use here, one can download from https://drive.google.com/drive/folders/1UTxdQRsDAkfqet1Ttm704oguYIleo3JO, or download from open-meteo website by running [download_open+meteo_weather.ipynb](../EDA/download_open_meteo_weather.ipynb)

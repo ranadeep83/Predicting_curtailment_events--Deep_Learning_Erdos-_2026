@@ -9,3 +9,4 @@ From smard.de, we have obtained hourly data from 12:00 AM, 1 May 2019 to  6:00 A
 
 
 ### Open-Meteo
+For the Open meteo data we use here, one can download from https://drive.google.com/drive/folders/1Hdh1lPg-RQljx7lzWZLcbSLa1OY9ehX4, or download from open-meteo website by running [download_open+meteo_weather.ipynb](../EDA/download_open_meteo_weather.ipynb)
